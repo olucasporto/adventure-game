@@ -10,9 +10,9 @@ public class Tools {
 		return randomNumber;
 	}
 
-	public void setRandomNumber(int maxNumber) {
+	public int getRandomNumber(int maxNumber) {
 		this.randomNumber = new Random();
-		randomNumber.nextInt(maxNumber);
+		return this.randomNumber.nextInt(maxNumber);
 	}
 
 	

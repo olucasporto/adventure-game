@@ -1,1 +1,13 @@
 1648445295274	Rename package 'tutorials'
+1648514330457	Delete element
+1648514354311	Rename type 'Actions'
+1648514454480	Delete element
+1648514626787	Delete element
+1648514668050	Rename type 'CharActions'
+1648514738287	Rename type 'Enemy'
+1648514755612	Copy compilation unit
+1648514900488	Rename method 'run'
+1648514925890	Delete element
+1648514932856	Delete element
+1648515486859	Rename method 'lookForAdventure'
+1648516302213	Rename type 'Enemies'
