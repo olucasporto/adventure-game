@@ -1,24 +1,32 @@
 package adventuregame;
 
-public class Enemy extends Char implements EnemiesActions {
+public class Enemy extends Char implements EnemyActions {
 	private String[] listOfEnemies = { "Skeleton", "Zombie", "Warrior", "Assassin" };
-	private String name = listOfEnemies[tools.getRandomNumber(listOfEnemies.length)];
-	private int maxEnemyHealth = 75;
-	private int maxEnemyAttackDamage = 25;
-	private int health = tools.getRandomNumber(maxEnemyHealth);
-	private int attackDamage = tools.getRandomNumber(maxEnemyAttackDamage);
-	
+	private int maxEnemyHealth;
 
-	public String getName() {
-		return this.name;
+	public Enemy() {
+		this.setName();
+		this.setHealth();
+	}
+
+	public void setMaxEnemyHealth() {
+		this.maxEnemyHealth = 75;
+	}
+	
+	public void setName() {
+		this.name = listOfEnemies[tools.getRandomNumber(listOfEnemies.length)];
 	}
 
 	public void setHealth() {
-		super.health = tools.getRandomNumber(maxEnemyHealth);
+		this.setMaxEnemyHealth();
+		this.health = tools.getRandomNumber(maxEnemyHealth);
 	}
-
-	public void setAttackDamage() {
-		super.attackDamage = tools.getRandomNumber(maxEnemyAttackDamage);
+	
+	@Override
+	public void setMaxAttackDamage() {
+		this.maxAttackDamage = 25;
 	}
+	
+	
 
 }

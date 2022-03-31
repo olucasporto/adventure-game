@@ -1,17 +1,21 @@
 package adventuregame;
 
 public class Hero extends Char implements HeroActions {
-	private int health = 100;
-	private int maxHeroAttackDamage = 50;
 	// private int damageDealt;
 	// private int damageTaken;
+	HealthPotions healthPotions;
+
+	public Hero() {
+		this.setHealth();
+	}
 
 	public int getHealth() {
 		return this.health;
 	}
 
-	public void setAttackDamage() {
-		super.attackDamage = tools.getRandomNumber(maxHeroAttackDamage);
+	@Override
+	public void setHealth() {
+		this.health = 100;
 	}
 
 	@Override
@@ -35,6 +39,11 @@ public class Hero extends Char implements HeroActions {
 	public void continueAdventure() {
 		// TODO look for trouble
 		System.out.println("You decided to continue on your adventure!");
+	}
+
+	@Override
+	public void setMaxAttackDamage() {
+		this.maxAttackDamage = 50;
 	}
 
 }
