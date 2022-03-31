@@ -2,10 +2,10 @@ package adventuregame;
 
 public class BackPack {
 	
-	public HealthPotions healthPotions;
+	public HealthPotionsHero healthPotions;
 	
 	public BackPack() {
-		this.healthPotions = new HealthPotions();
+		this.healthPotions = new HealthPotionsHero();
 		
 	}
 	

@@ -1,32 +1,26 @@
 package adventuregame;
 
-public class HealthPotions {
-	public int HealthPotionsQuatity = 3;
-	public int HealthPotionsHealAmount = 30;
-	public int HealthPotionsDropChance = 50;
-	
+public abstract class HealthPotions {
+	protected int healthPotionsQuatity;
+	protected int healthPotionsHealAmount;
+	protected Tools tools;
+
 	public HealthPotions() {
-		setHealthPotionsQuatity();
+		setInitialHealthPotionsQuatity();
 		setHealthPotionsHealAmount();
-		setHealthPotionsDropChance();
+	}
+
+	public int getHealthPotionsQuatity() {
+		return healthPotionsQuatity;
 	}
 	
-	public int getHealthPotionsQuatity() {
-		return HealthPotionsQuatity;
-	}
-	public void setHealthPotionsQuatity() {
-		this.HealthPotionsQuatity = 3;
-	}
+	public abstract void setInitialHealthPotionsQuatity();
+
 	public int getHealthPotionsHealAmount() {
-		return HealthPotionsHealAmount;
+		return healthPotionsHealAmount;
 	}
+
 	public void setHealthPotionsHealAmount() {
-		this.HealthPotionsHealAmount = 30;
-	}
-	public int getHealthPotionsDropChance() {
-		return HealthPotionsDropChance;
-	}
-	public void setHealthPotionsDropChance() {
-		this.HealthPotionsDropChance = 50;
+		this.healthPotionsHealAmount = 30;
 	}
 }

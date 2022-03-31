@@ -11,3 +11,16 @@
 1648514932856	Delete element
 1648515486859	Rename method 'lookForAdventure'
 1648516302213	Rename type 'Enemies'
+1648700289128	Rename type 'HealthPotions'
+1648700302189	Delete element
+1648700310238	Copy compilation unit
+1648700837335	Rename field 'HealthPotionsQuatity'
+1648700847106	Rename field 'HealthPotionsHealAmount'
+1648700862353	Rename field 'HealthPotionsQuatity'
+1648700871223	Rename field 'HealthPotionsHealAmount'
+1648700879274	Rename field 'HealthPotionsDropChance'
+1648701353838	Rename method 'setHealth'
+1648702505162	Rename method 'setName'
+1648702727085	Rename method 'getMaxEnemyHealth'
+1648702737132	Rename field 'maxEnemyHealth'
+1648703762821	Rename method 'setEnemyName'

@@ -2,39 +2,35 @@ package adventuregame;
 
 public abstract class Char {
 
-	protected String name;
 	protected int health;
-	protected int attackDamage;
 	protected int maxAttackDamage;
+	protected HealthPotions healthPotions;
 	protected Tools tools;
 
 	public Char() {
 		this.tools = new Tools();
+		this.setInitialHealth();
+		this.setMaxAttackDamage();
 	}
 
 	public void attack(Char target) {
-		target.health -= this.attackDamage;
+		int damageDealt = tools.getRandomNumber(getMaxAttackDamage());
+		loseHealth(target, damageDealt);
 	}
 
-	public String getName() {
-		return this.name;
+	public void loseHealth(Char target, int damageTaken) {
+		target.health -= damageTaken;
 	}
 
 	public int getHealth() {
 		return this.health;
 	}
 
-	public abstract void setHealth();
-	
-	public int getAttackDamage() {
-		return this.attackDamage;
-	}
+	public abstract void setInitialHealth();
 
-	public void setAttackDamage() {
-		this.attackDamage = tools.getRandomNumber(maxAttackDamage);
-	}
-	
 	public abstract void setMaxAttackDamage();
 
-	
+	public int getMaxAttackDamage() {
+		return this.maxAttackDamage;
+	};
 }
